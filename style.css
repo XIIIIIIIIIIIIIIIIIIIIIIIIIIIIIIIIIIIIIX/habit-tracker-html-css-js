@@ -1,0 +1,133 @@
+
+    :root {
+      --primary: #3e65aa;
+      --accent: #ff8c42;
+      --bg: #f9f9fb;
+      --border: #e3e6ef;
+    }
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      margin: 0;
+      background: var(--bg);
+      color: #222;
+    }
+    header {
+      background: var(--primary);
+      color: #fff;
+      padding: 1rem 2rem;
+      text-align: center;
+    }
+    main {
+      max-width: 900px;
+      margin: 2rem auto;
+      background: #fff;
+      box-shadow: 0 2px 8px #0001;
+      border-radius: 8px;
+      padding: 2rem;
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    section {
+      flex: 1 1 360px;
+      min-width: 320px;
+      max-width: 400px;
+    }
+    h2 {
+      font-size: 1.2rem;
+      margin: 0 0 1rem 0;
+      color: var(--primary);
+      border-left: 4px solid var(--accent);
+      padding-left: .7em;
+    }
+    form {
+      display: flex;
+      gap: .5em;
+      margin-bottom: 1em;
+    }
+    input, button, select {
+      padding: .5em;
+      font-size: 1em;
+      border-radius: 4px;
+      border: 1px solid var(--border);
+      outline: none;
+    }
+    button {
+      background: var(--primary);
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      transition: background .2s;
+    }
+    button:hover {
+      background: var(--accent);
+    }
+    ul.habits-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      margin-bottom: .8em;
+    }
+    ul.habits-list li {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: .4em .2em;
+      border-bottom: 1px solid var(--border);
+      gap: .4em;
+    }
+    ul.habits-list li .habit-name {
+      font-weight: 500;
+      flex: 1 1 auto;
+    }
+    .habit-actions {
+      display: flex;
+      gap: .3em;
+    }
+    .day-checkboxes {
+      display: flex;
+      justify-content: flex-start;
+      gap: .16em;
+      font-size: .9em;
+      margin: .4em .2em;
+    }
+    .day-checkboxes label {
+      cursor: pointer;
+    }
+    .history-list {
+      max-height: 210px;
+      overflow-y: auto;
+      margin-top: .5em;
+      font-size: .98em;
+      border-radius: 4px;
+      border: 1px solid var(--border);
+      background: #f6f8fe;
+      padding: .5em;
+    }
+    .stats {
+      padding-left: 8px;
+      line-height: 1.65em;
+    }
+    canvas {
+      display: block;
+      margin: 0 auto .5em auto;
+      max-width: 100%;
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+    }
+    .notif-setter {
+      display: flex;
+      align-items: center;
+      gap: .5em;
+      margin-top: .8em;
+      font-size: .99em;
+    }
+    .notif-setter input[type="time"] {
+      width: 110px;
+    }
+    @media (max-width: 900px) {
+      main { flex-direction: column; align-items: center; }
+      section { max-width: 600px;}
+    }
